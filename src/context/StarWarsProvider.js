@@ -54,7 +54,7 @@ export default function StarWarsProvider(props) {
     }
     getPlanets();
     console.log(planets);
-  }, []);
+  }, [planets]);
 
   useEffect(() => {
     const result = filterPlanetName(nameFilter, sortedPlanetes);
@@ -135,20 +135,18 @@ export default function StarWarsProvider(props) {
   }
 
   return (
-    <div>
-      <StarWarsContext.Provider
-        value={ { planets,
-          changeNameFilter,
-          nameFilter,
-          addFilter,
-          filters,
-          removeFilter,
-          removeAllFilters,
-          sortPlanets } }
-      >
-        {children}
-      </StarWarsContext.Provider>
-    </div>
+    <StarWarsContext.Provider
+      value={ { planets,
+        changeNameFilter,
+        nameFilter,
+        addFilter,
+        filters,
+        removeFilter,
+        removeAllFilters,
+        sortPlanets } }
+    >
+      {children}
+    </StarWarsContext.Provider>
   );
 }
 
