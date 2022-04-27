@@ -1,13 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import StarWarsContext from '../context/StarWarsContext';
+import style from './Table.module.css';
 
 function BodyTdContent(value) {
-  if (Array.isArray(value)) {
-    const result = value.reduce((acc, item) => (`${acc}
-${item}`), '');
-    return result;
-  }
-  return value;
+  const result = Array.isArray(value)? value
+  .map((item) => <p key={item}>{item}</p>): value
+  return result
 }
 
 export default function Table() {
@@ -21,6 +19,7 @@ export default function Table() {
     }
   }, [planets]);
   return (
+    <div className={style.container} >
     <table>
       {planets.length > 0 && (
         <>
@@ -44,5 +43,6 @@ export default function Table() {
         </>
       )}
     </table>
+    </div>
   );
 }

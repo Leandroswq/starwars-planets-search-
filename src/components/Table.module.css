@@ -1,0 +1,33 @@
+.container {
+  flex-grow: 1;
+  overflow-x: auto;
+  position: relative;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-top: 5px solid white;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+thead tr th, tbody tr td {
+  border-bottom: 4px solid var(--gray3);
+  color: var(--fontcolor1);
+  font-size: var(--fontsize2);
+  padding: 12px 8px;
+
+}
+
+thead tr th {
+  background-color: var(--gray2);
+  display: table-cell;
+  position: sticky;
+  top: -5px;
+}
+
+p {
+  color: var(--fontcolor1);
+}

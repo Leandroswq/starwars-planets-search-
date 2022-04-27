@@ -53,9 +53,7 @@ export default function StarWarsProvider(props) {
       setPlanetsDefault(results);
     }
     getPlanets();
-    console.log(planets);
-  }, [planets]);
-
+  }, []);
   useEffect(() => {
     const result = filterPlanetName(nameFilter, sortedPlanetes);
     setPlanets(result);
