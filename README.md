@@ -10,3 +10,13 @@ Desenvolver uma aplicação React com o objetivo de testar meu conhecimento em:
 - Context API 
 - React
 - Hooks
+
+
+## Requisitos para executar a aplicação
+
+- javascript versão 16(lts)
+
+## Como executar a plicação
+
+- npm install
+- npm start
